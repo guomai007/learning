@@ -8,5 +8,3 @@ def calc():
 
 
 calc()
-
-### main
