@@ -21,3 +21,11 @@ class Oriole(Bird):
 summer = Chicken()
 print summer.have_feather
 print summer.move(5,8)
+
+
+class happyBird(Bird):
+    def __init__(self,more_words):
+        print 'We are happy birds.',more_words
+
+summer = happyBird(456)
+summer = happyBird('Happy,Happy!')

@@ -14,15 +14,15 @@ Content-Type: text/html
 </head>
 <html>
 <p>Wow, Python Server</p>
-<IMG src="test.jpg"/>
+<IMG src="test.png"/>
 </html>
 '''
 
 # Read picture, put into HTTP format
-f = open('test.jpg','rb')
+f = open('test.png','rb')
 pic_content = '''
 HTTP/1.x 200 OK  
-Content-Type: image/jpg
+Content-Type: image/png
 
 '''
 pic_content = pic_content + f.read()
@@ -44,12 +44,12 @@ while True:
     # deal with GET method
     if method == 'GET':
         # ULR    
-        if src == '/test.jpg':
+        if src == '/test.png':
             content = pic_content
         else: content = text_content
 
         print 'Connected by', addr
-        print 'Request is:', request
+        print 'Request is:', '\n',request
         conn.sendall(content)
     # close connection
     conn.close()
