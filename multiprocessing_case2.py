@@ -16,6 +16,8 @@ p1   = mul.Process(target=proc1, args=(pipe[0],))
 # Pass the other end of the pipe to process 2
 p2   = mul.Process(target=proc2, args=(pipe[1],))
 p1.start()
+#print p1.PID()
 p2.start()
+#print p2.PID()
 p1.join()
 p2.join()
